@@ -1,2 +1,2 @@
 #!/bin/bash
-ps aux | grep "$1" | grep -v "vsz" | grep -v "rss"
+ps aux | grep "^$1" | grep -v ' 0  0 ' | grep -v ' 0   0 '
