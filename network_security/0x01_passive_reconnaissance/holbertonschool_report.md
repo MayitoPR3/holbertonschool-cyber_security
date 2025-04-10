@@ -1,11 +1,12 @@
-- Holberton Information Gathering Report
+# Holberton Information Gathering Report
 
-IP Addresses ranges within holbertonschool.com domaine
-* 35.180.27.154
-* 52.47.143.83
+## IP Addresses ranges within holbertonschool.com domaine
 
-- Technologies and frameworks used within all subdomains of holbertonschool.com
+- 35.180.27.154
+- 52.47.143.83
 
-* Server: nginx/1.18.0 (Ubuntu)
+## Technologies and frameworks used within all subdomains of holbertonschool.com
 
-* Content-Type: text/html
+- Server: nginx/1.18.0 (Ubuntu)
+
+- Content-Type: text/html
