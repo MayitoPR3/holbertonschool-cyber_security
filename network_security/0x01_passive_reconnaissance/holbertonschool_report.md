@@ -2,7 +2,7 @@
 
 This report provides an analysis of the `holbertonschool.com` domain based on information gathered using Shodan. The objective is to collect all IP ranges associated with the domain and identify the technologies and frameworks used across its subdomains.
 
-## IP Addresses ranges within holbertonschool.com domaine
+## IP Addresses ranges within holbertonschool.com domain
 
 Identifying the complete set of IP ranges for a domain involves mapping its DNS records and associated services. Using Shodan’s capabilities to query hostnames and network data, the following observations were made:
 
