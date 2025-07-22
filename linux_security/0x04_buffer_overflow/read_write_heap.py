@@ -71,5 +71,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# This script reads and writes to the heap of a process given its PID.
-# It searches for a specific string in the heap and replaces it with another string.    
