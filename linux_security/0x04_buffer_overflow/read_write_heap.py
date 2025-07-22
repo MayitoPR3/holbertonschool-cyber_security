@@ -27,15 +27,13 @@ def main():
     maps_path = f"/proc/{pid}/maps"
     mem_path = f"/proc/{pid}/mem"
 
-    # 1. Check that process and maps file exist
     if not os.path.exists(maps_path):
         print("Error: process does not exist")
         sys.exit(1)
 
-    # 2. Find heap segment
     try:
-        with open(maps_path, 'r') as maps:
-            for line in maps:
+        with open(maps_path, 'r') as maps_file:
+            for line in maps_file:
                 if "[heap]" in line:
                     addr = line.split()[0]
                     start, end = [int(x, 16) for x in addr.split("-")]
@@ -47,19 +45,19 @@ def main():
         print("Error: cannot read memory map")
         sys.exit(1)
 
-    # 3. Open memory and search
     try:
-        with open(mem_path, 'rb+') as mem:
-            mem.seek(start)
-            heap = mem.read(end - start)
+        with open(mem_path, "rb+") as mem_file:
+            mem_file.seek(start)
+            heap = mem_file.read(end - start)
 
             index = heap.find(search)
             if index == -1:
                 print("Error: search_string not found in heap")
                 sys.exit(1)
 
-            mem.seek(start + index)
-            mem.write(replace.ljust(len(search), b'\x00'))
+            mem_file.seek(start + index)
+            mem_file.write(replace.ljust(len(search), b'\x00'))
+
     except PermissionError:
         print("Error: permission denied")
         sys.exit(1)
