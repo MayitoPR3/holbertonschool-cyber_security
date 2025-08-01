@@ -1,4 +1,4 @@
 #!/bin/bash
 
-LOGFILE="dmesg.txt"
+LOGFILE="dmesg.log"
 grep "Linux version" "$LOGFILE"
