@@ -1,3 +1,2 @@
 #!/bin/bash
-TARGET="$1"
-sudo nmap -sC -sV "$TARGET"
+TARGET="$1" | sudo nmap -sC -sV "$TARGET"
