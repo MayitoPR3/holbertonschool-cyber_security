@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap --script vuln "$1"
+nmap --script vulners "$1"
