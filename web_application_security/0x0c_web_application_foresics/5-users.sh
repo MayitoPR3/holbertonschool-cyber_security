@@ -1,3 +1,3 @@
 #!/bin/bash
 LOGFILE="./auth.log"
-grep 'COMMAND=/sbin/iptables -A' "$LOGFILE" | wc -l
+grep "useradd" "$LOGFILE" | grep -oP 'name=\K[^,]+' | sort | uniq | paste -sd "," -
