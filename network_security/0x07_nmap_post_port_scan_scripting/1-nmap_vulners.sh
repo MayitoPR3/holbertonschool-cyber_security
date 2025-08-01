@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap --script vulners "$1"
+nmap --script vulners "$1" 80 443
