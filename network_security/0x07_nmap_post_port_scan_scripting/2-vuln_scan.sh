@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap --scrpt http-vuln-cve2017-5638 "$1" -oN vuln_scan_resuts.txt
+nmap --scrpt http-vuln-cve2017-5638 NSE "$1" -oN vuln_scan_resuts.txt
