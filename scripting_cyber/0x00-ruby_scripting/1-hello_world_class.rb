@@ -1,4 +1,4 @@
 class HelloWorld
+  def initialize
     @message = "Hello, World!"
-    def print_hello
-    end
+  end
