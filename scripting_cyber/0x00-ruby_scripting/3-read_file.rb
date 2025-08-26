@@ -1,4 +1,4 @@
-require 'prime'
+require 'json'
 
 def count_user_ids(path)
     # Read file content
