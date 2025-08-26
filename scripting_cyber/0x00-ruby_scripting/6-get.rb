@@ -1,6 +1,5 @@
 def get_request(url)
     require 'net/http'
-    uri = URI(url)
-    response = Net::HTTP.get(uri)
+    response = Net::HTTP.get(URI(url))
     puts response
 end
