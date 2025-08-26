@@ -2,7 +2,7 @@ require 'uri'
 require 'net/http'
 require 'json'
 
-def post_request(url, body_params)
+def post_request(url, body_params = {})
     uri = URI(url)
 
     headers = { 'Content-Type' => 'application/json' }
