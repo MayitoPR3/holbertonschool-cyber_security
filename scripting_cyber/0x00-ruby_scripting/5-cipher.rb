@@ -1,14 +1,14 @@
 class CeasarCipher
-  def iniatilize(shift)
+  def initialize(shift)
     @shift = shift
   end
 
   def encrypt(message)
-    cypher(message, @shift)
+    cipher(message, @shift)
   end
 
-  def encrypt(message)
-    cypher(message. -@shift)
+  def decrypt(message)
+    cipher(message, -@shift)
   end
 
   private
@@ -25,4 +25,4 @@ class CeasarCipher
       end.join
     end
 end
-  
+
