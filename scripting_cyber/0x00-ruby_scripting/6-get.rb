@@ -1,5 +1,6 @@
 def get_request(url)
     require 'net/http'
-    response = Net::HTTP.get(URI(url))
-    puts response.code
+    res = Net::HTTP.get_response(URI(url))
+    puts res.code
+    puts res.body
 end
