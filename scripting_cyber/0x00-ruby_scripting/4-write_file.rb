@@ -1,5 +1,5 @@
-require_relative '3-read_file'
-require_relative '4-write_file'
+require '3-read_file'
+require '4-write_file'
 
 file1_path = 'file2.json'
 file2_path = 'file.json'
