@@ -3,17 +3,19 @@ require 'json'
 require 'uri'
 
 def get_request(url)
-    uri = URI(url)
-    response = Net::HTTP.get(uri)
+  uri = URI(url)
+  response = Net::HTTP.get_response(uri)
 
-    puts "Response status: #{response.code} #{response.message}"
+  # Print response status
+  puts "Response status: #{response.code} #{response.message}"
 
-    begin
-        json_body = JSON.parse(response.body)
-        puts "Response body:"
-        puts JSON.pretty_generate(json_body)
-    rescue JSON::ParserError
-        puts "Response body:"
-        puts response.body
-    end
+  # Parse body as JSON if possible, otherwise print raw
+  begin
+    json_body = JSON.parse(response.body)
+    puts "Response body:"
+    puts JSON.pretty_generate(json_body)
+  rescue JSON::ParserError
+    puts "Response body:"
+    puts response.body
+  end
 end
