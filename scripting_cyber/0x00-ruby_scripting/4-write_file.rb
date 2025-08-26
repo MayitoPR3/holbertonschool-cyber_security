@@ -11,4 +11,6 @@ def merge_json_files(file1_path, file2_path)
 
   # Merge arrays
   merged_data = data2 + data1
-  
+
+  end
+end
