@@ -5,7 +5,7 @@ require 'json'
 def post_request(url, body_params)
     uri = URI(url)
 
-    headers = { 'Content-Type' => 'application/json'}
+    headers = { 'Content-Type' => 'application/json' }
     res = Net::HTTP.post(uri, body_params.to_json, headers)
 
     puts "Response status: #{res.code} #{res.message}"
