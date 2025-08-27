@@ -2,7 +2,7 @@ require 'digest'
 
 # Check arguments
 if ARGV.length != 2
-    puts "Usage: #{$0} HASH_PASSWORD DICTIONARY_FILE"
+    puts "Usage: #{$0} HASHED_PASSWORD DICTIONARY_FILE"
     exit
 end
 
