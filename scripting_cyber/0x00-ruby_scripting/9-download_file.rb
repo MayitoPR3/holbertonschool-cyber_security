@@ -3,7 +3,7 @@ require 'open-uri'
 require 'fileutils'
 
 if ARGV.length != 2
-  puts "Usage: #{$0} URL PATH"
+  puts "Usage: #{$0} URL LOCAL_FILE_PATH"
   exit
 end
 
