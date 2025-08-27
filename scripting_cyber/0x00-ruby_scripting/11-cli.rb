@@ -53,6 +53,7 @@ elsif options[:list]
   if tasks.empty?
     puts "No tasks found."
   else
+    puts "Tasks:"
     tasks.each_with_index do |task, i|
       puts "#{i + 1}. #{task}"
     end
