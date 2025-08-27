@@ -6,7 +6,7 @@ if ARGV.length != 2
     exit
 end
 
-hash_password = ARGV[0]
+hashed_password = ARGV[0].downcase.strip
 dictionary_file = ARGV[1]
 
 begin
