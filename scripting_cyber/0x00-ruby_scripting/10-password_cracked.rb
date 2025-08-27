@@ -18,7 +18,7 @@ begin
         # Compute SHA-256 hash
         hash = Digest::SHA256.hexdigest(word)
 
-        if hasg == hashed_password
+        if hash == hashed_password
             puts "Password found: #{word}"
             found = true
             break
